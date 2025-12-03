@@ -32,6 +32,8 @@
   <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
+
+
   <!-- =======================================================
   * Template Name: Profolio
   * Template URL: https://bootstrapmade.com/snapfolio-bootstrap-portfolio-template/
@@ -609,36 +611,61 @@
           <div class="col-lg-7">
             <div class="contact-form">
               <h3>Get In Touch</h3>
-
-              <form action="forms/contact.php" method="post" class="php-email-form">
+              
+              <!-- Updated Form with IDs for JavaScript -->
+              <form id="contactForm" class="php-email-form">
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="col-md-6">
+                    <input type="text" name="surname" id="surname" class="form-control" placeholder="Surname" required>
+                  </div>
+
+                  <div class="col-md-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required>
+                  </div>
+
+                  <!-- Rating Questions (1-10) -->
+                  <div class="col-12">
+                    <label class="form-label">Rate our service (1-10):</label>
+                    <input type="number" class="form-control" id="rating1" min="1" max="10" placeholder="1-10" required>
+                  </div>
+                  
+                  <div class="col-12">
+                     <label class="form-label">Likelihood to recommend (1-10):</label>
+                    <input type="number" class="form-control" id="rating2" min="1" max="10" placeholder="1-10" required>
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                     <label class="form-label">Quality of support (1-10):</label>
+                    <input type="number" class="form-control" id="rating3" min="1" max="10" placeholder="1-10" required>
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
+                    <button type="submit" id="submitBtn" class="btn">Send Message</button>
                   </div>
 
                 </div>
               </form>
+
+              <!-- Results Display Area (Hidden by default) -->
+              <div id="formResults" style="display:none; margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px;">
+                  <h4>Form Data:</h4>
+                  <pre id="resultOutput" style="font-family: inherit; color: black;"></pre>
+                  <h4>Average Rating:</h4>
+                  <h3 id="averageOutput" style="font-weight: bold;"></h3>
+              </div>
 
             </div>
           </div>
@@ -688,6 +715,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Lab 5: Custom JS -->
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
