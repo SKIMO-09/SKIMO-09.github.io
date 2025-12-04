@@ -454,6 +454,56 @@
     </section><!-- /Resume Section -->
 
     <!-- Portfolio Section -->
+     <!-- Memory Game Section -->
+    <section id="memory-game" class="memory-game section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Memory Game</h2>
+        <p>Test your memory skills! Match all the pairs to win.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Game Controls & Stats -->
+        <div class="game-controls">
+          <div class="difficulty-selector">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty" class="form-select d-inline-block w-auto">
+              <option value="easy">Easy (4x3)</option>
+              <option value="hard">Hard (6x4)</option>
+            </select>
+          </div>
+
+          <div class="game-stats">
+            <span>Moves: <strong id="move-count">0</strong></span>
+            <span>Matches: <strong id="match-count">0</strong></span>
+            <!-- Optional Task 1: Best Score -->
+            <span class="best-score-display">Best: <strong id="best-score">-</strong></span>
+            <!-- Optional Task 2: Timer -->
+            <span>Time: <strong id="timer">00:00</strong></span>
+          </div>
+
+          <div class="game-buttons">
+            <button id="start-game-btn" class="btn btn-primary">Start Game</button>
+            <button id="restart-game-btn" class="btn btn-secondary" disabled>Restart</button>
+          </div>
+        </div>
+
+        <!-- Win Message -->
+        <div id="win-message" class="alert alert-success text-center mt-3" style="display: none;">
+          <h3>🎉 You Won! 🎉</h3>
+          <p>Great job! You found all pairs.</p>
+        </div>
+
+        <!-- Game Board -->
+        <div id="game-board" class="game-board">
+          <!-- Cards will be generated here by JavaScript -->
+        </div>
+
+      </div>
+
+    </section><!-- /Memory Game Section -->
+    
     <section id="portfolio" class="portfolio section">
 
       <!-- Section Title -->
