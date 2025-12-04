@@ -1,306 +1,4 @@
-/*LAB 9: CSS OVERRIDES*/
-
-/* 1. TYPOGRAPHY SYSTEM */
-/* Base Typography */
-body {
-    font-family: 'Open Sans', sans-serif !important;
-    /* CHANGED: Text color to white/light grey for visibility on dark background */
-    color: #e0e0e0; 
-    line-height: 1.6;
-    font-size: 18px;
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    /* CHANGED: Heading color to white */
-    color: #ffffff; 
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    font-family: 'Roboto Slab', serif !important;
-}
-
-h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-bottom: 3px solid #2563eb; /* Royal Blue underline */
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #a0a0a0; /* Lighter grey for sub-headings */
-    margin-top: 1.5rem;
-}
-
-/* Paragraph Styling */
-p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
-
-/* 2. INTERACTIVE ELEMENTS */
-
-/* Links */
-a {
-    color: #2563eb; /* Royal Blue */
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: #f59e0b; /* Amber on hover */
-    text-decoration: underline;
-    letter-spacing: 0.5px;
-}
-
-a:active {
-    color: #ffffff;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    background-color: #2563eb; /* Royal Blue */
-    color: white !important;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: transform 0.1s, background-color 0.3s, box-shadow 0.3s;
-}
-
-.btn:hover {
-    background-color: #1d4ed8; /* Darker Blue */
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4); /* Darker shadow */
-}
-
-.btn:active {
-    transform: translateY(-1px);
-    background-color: #1e293b;
-    box-shadow: none;
-}
-
-/* 3. SPACING SCALE & SURFACES*/
-
-/* Section Spacing */
-section {
-    padding: 60px 0 !important;
-}
-
-/* Resume Items - Card Look */
-.resume-item {
-    /* CHANGED: Dark background for cards */
-    background-color: #2c2c2c; 
-    border: 1px solid #444;
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.3s ease;
-    border-left: 5px solid #2563eb !important;
-}
-
-.resume-item:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-    border-color: #2563eb;
-}
-
-/*text color inside resume items */
-.resume-item h4, .resume-item h5, .resume-item p, .resume-item li {
-    color: #e0e0e0;
-}
-
-/* 4. COMPONENTS RESTYLED*/
-
-/* Component 1: Navbar (Sidebar) */
-.header {
-    background-color: #1a1a1a !important; /* Very Dark Grey */
-    border-right: 1px solid #333;
-}
-
-.navmenu a {
-    color: #bbb !important;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding: 15px;
-}
-
-.navmenu a:hover, .navmenu .active {
-    color: #f59e0b !important; /* Amber */
-    background-color: rgba(255,255,255,0.05);
-}
-
-/* Component 2: Back-to-Top Button */
-.scroll-top {
-    background-color: #f59e0b !important; 
-    border-radius: 4px !important;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.scroll-top:hover {
-    background-color: #2563eb !important;
-}
-
-.scroll-top i {
-    color: #1a1a1a; 
-}
-
-/* 5. OPTIONAL: STYLED LISTS */
-
-/* Resume Lists */
-.resume-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.resume-item ul li {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 0.8rem;
-}
-
-/* Custom square bullet */
-.resume-item ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 10px;
-    height: 10px;
-    background-color: #f59e0b; 
-    border-radius: 2px;
-}
-
-/* 6. OPTIONAL: TABLES */
-
-.custom-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    box-shadow: none;
-    border: 1px solid #444;
-    /* CHANGED: Dark background for table */
-    background: #2c2c2c; 
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-/* Header Row */
-.custom-table thead tr {
-    background-color: #1e293b; /* Dark Slate */
-    color: white;
-}
-
-.custom-table th, .custom-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #444;
-    color: #e0e0e0;
-}
-
-.custom-table th {
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-}
-
-/* Alignment: Numbers Right */
-.custom-table th:nth-child(3), .custom-table td:nth-child(3) {
-    text-align: right;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-}
-
-/* Zebra Striping (Dark Theme) */
-.custom-table tbody tr:nth-child(even) {
-    background-color: #333; 
-}
-
-/* Row Hover */
-.custom-table tbody tr:hover {
-    background-color: #444; 
-    cursor: default;
-}
-
-
-.resume-item ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.resume-item ul li {
-    position: relative;
-    padding-left: 2rem;
-    margin-bottom: 0.8rem;
-}
-
-.resume-item ul li::before {
-    content: "➤";
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 10px;
-    height: 10px;
-    color: #f59e0b; /* Amber */
-    font-weight: bold;
-    line-height: 1;
-    font-size: 1.2rem;
-}
-
-/* NEW: Ordered List with Counters */
-ol {
-    list-style: none;
-    counter-reset: my-counter;
-    padding-left: 0;
-}
-
-ol li {
-    counter-increment: my-counter;
-    margin-bottom: 0.5rem;
-    padding-left: 2.5rem;
-    position: relative;
-}
-
-ol li::before {
-    content: counter(my-counter) ".";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #2563eb; /* Blue counter */
-    font-weight: bold;
-    font-family: 'Roboto Slab', serif;
-}
-
-/* NEW: Nested List Styling */
-ul ul, ol ol, ul ol, ol ul {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem; 
-
-}
+/* ... (Your existing CSS from Lab 9) ... */
 
 /* ==========================================
    LAB 10 OPTIONAL TASK: ANIMATED BACKGROUND & SHAPES
@@ -382,3 +80,219 @@ ul ul, ol ol, ul ol, ol ul {
     animation-delay: 4s;
 }
 
+/* ==========================================
+   LAB 12: MEMORY GAME STYLES
+   ========================================== */
+
+.game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c2c2c; /* Dark background to match theme */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+.game-stats span {
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+.game-board {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    perspective: 1000px; /* For 3D flip effect */
+    margin: 0 auto;
+}
+
+/* Grid Layouts for Difficulty */
+.grid-easy {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+}
+
+.grid-hard {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 900px;
+}
+
+/* Responsive Mobile Grid */
+@media (max-width: 768px) {
+    .grid-easy { grid-template-columns: repeat(3, 1fr); }
+    .grid-hard { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Card Styling */
+.memory-card {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: 3/4; /* Standard card shape */
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+    transform: rotateY(180deg);
+    cursor: default;
+    opacity: 0.6; /* Dim matched cards */
+}
+
+/* Card Faces */
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hides back when flipped */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Front Face (The Image/Icon) */
+.front-face {
+    background-color: #fff;
+    transform: rotateY(180deg); /* Hidden by default */
+    font-size: 2.5rem; /* Icon size */
+}
+
+/* Back Face (The "Cover") */
+.back-face {
+    background-color: #2563eb; /* Blue back */
+    background-image: linear-gradient(135deg, #2563eb 25%, #1d4ed8 25%, #1d4ed8 50%, #2563eb 50%, #2563eb 75%, #1d4ed8 75%, #1d4ed8 100%);
+    background-size: 20px 20px; /* Pattern */
+}
+
+.front-face img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+/* ... (Your existing CSS) ... */
+
+/* ==========================================
+   LAB 12: MEMORY GAME STYLES
+   ========================================== */
+
+.game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c2c2c; /* Dark background to match theme */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+.game-stats span {
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+
+.game-board {
+    display: grid;
+    gap: 15px;
+    justify-content: center;
+    perspective: 1000px; /* For 3D flip effect */
+    margin: 0 auto;
+}
+
+/* Grid Layouts for Difficulty */
+.grid-easy {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+}
+
+.grid-hard {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 900px;
+}
+
+/* Responsive Mobile Grid */
+@media (max-width: 768px) {
+    .grid-easy { grid-template-columns: repeat(3, 1fr); }
+    .grid-hard { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Card Styling */
+.memory-card {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: 3/4; /* Standard card shape */
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+.memory-card.matched {
+    transform: rotateY(180deg);
+    cursor: default;
+    opacity: 0.6; /* Dim matched cards */
+}
+
+/* Card Faces */
+.front-face, .back-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Hides back when flipped */
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Front Face (The Image/Icon) */
+.front-face {
+    background-color: #fff;
+    transform: rotateY(180deg); /* Hidden by default */
+    font-size: 2.5rem; /* Icon size */
+    color: #333;
+}
+
+/* Back Face (The "Cover") */
+.back-face {
+    background-color: #2563eb; /* Blue back */
+    background-image: linear-gradient(135deg, #2563eb 25%, #1d4ed8 25%, #1d4ed8 50%, #2563eb 50%, #2563eb 75%, #1d4ed8 75%, #1d4ed8 100%);
+    background-size: 20px 20px; /* Pattern */
+}
+
+/* ==========================================
+   LAB 12: FIXES FOR MATCHED CARDS
+   ========================================== */
+
+/* When a card is matched, change the back face to Green */
+.memory-card.matched .back-face {
+    background-color: #28a745 !important; /* Green color */
+    background-image: none !important; /* Remove the pattern */
+    border: 2px solid #1e7e34; /* Darker green border */
+}
+
+/* Ensure the matched card stays flipped */
+.memory-card.matched .front-face {
+    background-color: #d4edda !important; /* Light green background for the icon side */
+    color: #155724 !important; /* Dark green icon color */
+    transform: rotateY(180deg);
+}
